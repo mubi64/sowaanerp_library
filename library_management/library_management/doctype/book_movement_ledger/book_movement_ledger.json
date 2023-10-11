@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "format:LM-BML-{#####}",
+ "creation": "2023-07-31 12:11:58.931544",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "engine": "InnoDB",
+ "field_order": [
+  "book",
+  "type",
+  "source_library",
+  "source_rack",
+  "column_break_emvmh",
+  "target_library",
+  "target_rack",
+  "book_issued_to",
+  "copies"
+ ],
+ "fields": [
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Book",
+   "options": "Book",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Main to Library\nLibrary to Library\nBook Issue\nBook Return\nBook Lost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_library",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Library",
+   "options": "Library",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_library",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target Library",
+   "options": "Library",
+   "read_only": 1
+  },
+  {
+   "fieldname": "book_issued_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Book Issued to",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "copies",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Copies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_emvmh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_rack",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Rack",
+   "options": "Rack",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_rack",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target Rack",
+   "options": "Rack",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "icon": "fa fa-list",
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-11 08:40:23.609390",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Book Movement Ledger",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
