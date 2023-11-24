@@ -64,7 +64,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Steup",
-   "link_count": 6,
+   "link_count": 7,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -127,9 +127,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fine Policy",
+   "link_count": 0,
+   "link_to": "Fine Policy",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-08-15 13:39:02.314433",
+ "modified": "2023-10-16 17:16:40.581060",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Management",

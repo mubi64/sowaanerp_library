@@ -12,9 +12,11 @@
   "book",
   "library",
   "target_rack",
+  "target_shelf",
   "column_break_k9f0a",
   "source_library",
   "source_rack",
+  "source_shelf",
   "copies_available",
   "number_of_copies",
   "amended_from"
@@ -93,12 +95,28 @@
    "label": "Source Rack",
    "mandatory_depends_on": "eval:doc.purpose == \"Library to Library\" && doc.book != null && doc.source_library != null",
    "options": "Rack"
+  },
+  {
+   "depends_on": "eval:doc.library != null",
+   "fieldname": "target_shelf",
+   "fieldtype": "Link",
+   "label": "Target Shelf",
+   "mandatory_depends_on": "eval:doc.library != null",
+   "options": "Shelve"
+  },
+  {
+   "depends_on": "eval:doc.purpose == \"Library to Library\" && doc.book != null && doc.source_library != null",
+   "fieldname": "source_shelf",
+   "fieldtype": "Link",
+   "label": "Source Shelf",
+   "mandatory_depends_on": "eval:doc.purpose == \"Library to Library\" && doc.book != null && doc.source_library != null",
+   "options": "Shelve"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-16 11:01:43.467329",
+ "modified": "2023-10-24 17:43:57.260836",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Transfer",

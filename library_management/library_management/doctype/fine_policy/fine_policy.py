@@ -4,7 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class Book(Document):
-	def validate(self):
-		# self.copies_available = self.number_of_copies
-		pass
+class FinePolicy(Document):
+	pass

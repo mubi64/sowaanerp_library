@@ -18,8 +18,10 @@
   "column_break_oadhl",
   "number_of_copies",
   "copies_available",
+  "copies_in_libraries",
   "language",
   "edition",
+  "price",
   "isbn"
  ],
  "fields": [
@@ -43,6 +45,7 @@
    "description": "International Standard Book Number",
    "fieldname": "isbn",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "ISBN"
   },
   {
@@ -64,13 +67,13 @@
   {
    "fieldname": "number_of_copies",
    "fieldtype": "Int",
+   "hidden": 1,
    "label": "Number of Copies"
   },
   {
    "fieldname": "copies_available",
    "fieldtype": "Int",
-   "hidden": 1,
-   "label": "Copies Available"
+   "label": "Copies Available in Warehouse"
   },
   {
    "fieldname": "language",
@@ -96,11 +99,22 @@
    "fieldname": "enabled",
    "fieldtype": "Check",
    "label": " Enabled"
+  },
+  {
+   "fieldname": "copies_in_libraries",
+   "fieldtype": "Int",
+   "label": "Copies in Libraries"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-04 14:09:07.422696",
+ "modified": "2023-10-19 15:07:16.461932",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book",

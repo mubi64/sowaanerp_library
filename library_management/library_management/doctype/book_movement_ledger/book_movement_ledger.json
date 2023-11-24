@@ -9,11 +9,15 @@
  "field_order": [
   "book",
   "type",
+  "type_id",
   "source_library",
   "source_rack",
+  "source_shelf",
   "column_break_emvmh",
   "target_library",
   "target_rack",
+  "target_shelf",
+  "user_category",
   "book_issued_to",
   "copies"
  ],
@@ -56,11 +60,11 @@
   },
   {
    "fieldname": "book_issued_to",
-   "fieldtype": "Link",
+   "fieldtype": "Dynamic Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Book Issued to",
-   "options": "User",
+   "options": "user_category",
    "read_only": 1
   },
   {
@@ -92,6 +96,35 @@
    "label": "Target Rack",
    "options": "Rack",
    "read_only": 1
+  },
+  {
+   "fieldname": "source_shelf",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Shelf",
+   "options": "Shelve",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_shelf",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target Shelf",
+   "options": "Shelve",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type_id",
+   "fieldtype": "Data",
+   "label": "Type ID"
+  },
+  {
+   "fieldname": "user_category",
+   "fieldtype": "Link",
+   "label": "User Category",
+   "options": "DocType"
   }
  ],
  "hide_toolbar": 1,
@@ -99,7 +132,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-11 08:40:23.609390",
+ "modified": "2023-10-19 17:11:32.953142",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Movement Ledger",
@@ -107,6 +140,7 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "delete": 1,
    "export": 1,
    "print": 1,
    "read": 1,
@@ -114,6 +148,7 @@
    "role": "Stock User"
   },
   {
+   "delete": 1,
    "export": 1,
    "read": 1,
    "report": 1,
